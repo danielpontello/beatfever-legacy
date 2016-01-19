@@ -16,7 +16,7 @@ You can install all of the libraries with the pip package manager:
 
 ## Development Notes
 ###Libraries
-Our goal was to recreate the "Catch the Beat" mode from osu!, a popular rhythm game for PC, on the Raspberry Pi. First of all, we needed a library that could output hardware-accelerated graphics on the Raspberry. We tried Love2D and PyGame, but we haven't managed to get they working with the RPi's GPU. The only one we found with proper hardware-accelerated graphics was Pi3D, so we sticked with it for the rest of the development proccess.
+Our goal was to recreate the "Catch the Beat" mode from osu!, a popular rhythm game for PC, on the Raspberry Pi. First of all, we needed a library that could output hardware-accelerated graphics on the Raspberry. We tried Love2D and PyGame, but we haven't managed to get they working with the RPi's GPU. The only one we found with proper hardware-accelerated graphics was Pi3D, so we sticked with it for the rest of the development process.
 
 ###File Format
 We planned to create our own file format for the song data, composed of a .ZIP file with a JSON file containing song information and the time and position of the fruits (where and when they should fall along with the music), and a MP3/OGG file with the audio data. However, because of the time constraints, we decided to use osu!'s [file format](https://osu.ppy.sh/wiki/Osu_(file_format)) instead. That had the added benefit of making our game compatible with osu!'s beatmaps.
@@ -31,7 +31,7 @@ The Pi3d version we used uses [ncurses](https://www.gnu.org/software/ncurses/) f
 
 ###Drawing the background
 
-Drawing the background every frame at 1080p resolution on Pi3d was very perfonrmance-heavy; that made the game run at <20FPS speeds. So, we made the PyGame window fullscreen and borderless, and drew the background once on it. Then, we made the Pi3d background transparent, so the PyGame window appears behind the Pi3d one. Because the PyGame window has the background drawn on it, you can see the background rendered in PyGame behind the game elements rendered on Pi3d.
+Drawing the background every frame at 1080p resolution on Pi3d was very performance-heavy; that made the game run at <20FPS speeds. So, we made the PyGame window fullscreen and borderless, and drew the background once on it. Then, we made the Pi3d background transparent, so the PyGame window appears behind the Pi3d one. Because the PyGame window has the background drawn on it, you can see the background rendered in PyGame behind the game elements rendered on Pi3d.
 
 ## Resources
 - [Pi3d Book](http://paddywwoof.github.io/pi3d_book/_build/html/)
