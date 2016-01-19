@@ -45,5 +45,8 @@ We would like to thank our master and inspiration:
 
 ![We would like to thank our master and inspiration](http://i.imgur.com/jktSRrJ.jpg)
 
+Seriously, huge thanks goes to:
+ - paddyg, for helping us with Pi3D rendering and general OpenGL stuff
+
 ## Authors
 Daniel Sader & Pedro Polez
