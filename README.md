@@ -50,3 +50,5 @@ Seriously, huge thanks goes to:
 
 ## Authors
 Daniel Sader & Pedro Polez
+
+Some graphics taken from the original osu!. (Sorry, we had no time to draw a proper character!)
