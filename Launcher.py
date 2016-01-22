@@ -54,7 +54,7 @@ for root, dirs, files in os.walk('songs'):
 
 songsString = ""
 songsList = []
-Pi3dIsAPieceOfBullshit = []
+songObjectList = []
 for i in range(len(songs)):
 	with open("songs/" + songs[i] + "/DataNew.osu", "r") as file:
 		data = file.read()
@@ -66,7 +66,7 @@ for i in range(len(songs)):
 		songsString = songsList[i].name + "\n"
 		songsObject = pi3d.String(camera=GameCamera, font=GameFont, string=songsString, x=0, y=0, z=3.0, is_3d=False, size=0.40, justify="C")
 		songsObject.set_shader(SpriteShader)
-		Pi3dIsAPieceOfBullshit.append(songsObject)
+		songObjectList.append(songsObject)
 
 title = pi3d.String(camera=GameCamera, font=GameFont, string="SONG SELECT", x=0, y=400, z=3.0, is_3d=False, size=0.60, justify="C")
 title.set_shader(SpriteShader)
@@ -135,9 +135,9 @@ while GameDisplayLauncher.loop_running():
 	  
   selected = clamp(selected, 0, len(songsList)-1) 
 	  
-  for i in range(len(Pi3dIsAPieceOfBullshit)):
-	  Pi3dIsAPieceOfBullshit[i].position(0, lerp(Pi3dIsAPieceOfBullshit[i].y(), ((i - selected- 1) * -90)-140, 0.5), 3.0)
-	  Pi3dIsAPieceOfBullshit[i].draw()
+  for i in range(len(songObjectList)):
+	  songObjectList[i].position(0, lerp(songObjectList[i].y(), ((i - selected- 1) * -90)-140, 0.5), 3.0)
+	  songObjectList[i].draw()
 	  
   
   texty = lerp(texty, targety, 0.5)
